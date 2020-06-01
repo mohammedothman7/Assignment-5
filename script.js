@@ -1,16 +1,9 @@
 const addRows = () => {
   // Add rows to the table (#1)
-  //   let table = document.getElementById("table");
-  //   let row = table.insertRow(0);
-  //   let cell = row.insertCell(0);
-  //   cell.innerHTML = "Hello";
   let table = document.getElementById("table");
-  let row = table.rows;
-
-  for (let i = 0; i < row.length; i++) {
-    let cell = row[i].insertRow(0);
-    cell.innerHTML = "Hello";
-  }
+  let row = table.insertRow(0);
+  let cell = row.insertCell(0);
+  cell.innerHTML = "Hello";
 };
 
 const addColumns = () => {
