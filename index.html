@@ -8,19 +8,23 @@
   </head>
   <body>
     <div class="add_rows">
-      <button id="add_rows" onclick="addRows()">Add Rows!</button>
+      <button id="add_rows_button" onclick="addRows()">Add Rows!</button>
+    </div>
+    <div id="add_columns">
+      <button id="add_columns_button" onclick="addColumns()">
+        Add Columns!
+      </button>
     </div>
     <div class="remove_rows">
       <button id="remove_rows" onclick="removeRows()">Remove Rows!</button>
     </div>
     <div class="remove_columns">
-      <button id="remove_columns" onclick="removeColumns()">Remove Columns!</button>
+      <button id="remove_columns" onclick="removeColumns()">
+        Remove Columns!
+      </button>
     </div>
     <div class="clear_color">
       <button id="clear_color" onclick="clear_color()">Clear all color!</button>
-    </div>
-    <div>
-      <table id="table"></table>
     </div>
     <h1>Choose a Color:</h1>
     <select id="colors" onchange="selectColor();">
@@ -30,6 +34,9 @@
       <option value="blue">Blue</option>
       <option value="yellow">Yellow</option>
     </select>
+    <div>
+      <table id="table"></table>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
