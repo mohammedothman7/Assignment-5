@@ -7,6 +7,7 @@ const addRows = () => {
 };
 
 const addColumns = () => {
+  // Add columns to the table (#2)
   let table = document.getElementById("table");
   let row = table.rows;
 
