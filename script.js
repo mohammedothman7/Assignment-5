@@ -35,4 +35,9 @@ function selectColor() {
     document.getElementById("table").style.color = selectedColor;
 }
 
-
+/**
+ * clear all cells/restore all cells to their original/initial color
+ */
+function clear_color() {
+    document.getElementById("table").style.color = "black";
+}
