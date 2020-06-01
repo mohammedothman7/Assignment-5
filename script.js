@@ -25,3 +25,14 @@ const removeColumns = () => {
         row[i].deleteCell(index);
     }
 }
+
+/**
+ * fill all cells with the currently selected color
+ */
+function selectColor() {
+    const colorList = document.getElementById("colors");
+    let selectedColor = colorList.value;
+    document.getElementById("table").style.color = selectedColor;
+}
+
+
