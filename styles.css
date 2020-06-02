@@ -1,3 +1,14 @@
 body table {
   border: 1px solid black;
 }
+
+td {
+  border: 1px solid black;
+  margin: 0px;
+}
+
+button {
+  border: 1px solid white;
+  margin: auto;
+  font-size: larger;
+}
