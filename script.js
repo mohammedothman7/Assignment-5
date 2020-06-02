@@ -6,6 +6,17 @@ const addRows = () => {
   cell.innerHTML = "Hello";
 };
 
+const addColumns = () => {
+  // Add columns to the table (#2)
+  let table = document.getElementById("table");
+  let row = table.rows;
+
+  for (let i = 0; i < row.length; i++) {
+    let cell = row[i].insertCell(0);
+    cell.innerHTML = "Hello";
+  }
+};
+
 /**
  * Remove rows in the table (#3)
  */
@@ -15,7 +26,7 @@ const removeRows = () => {
 };
 
 /**
- * Remove columns in the table (#4) by looping through the entire column 
+ * Remove columns in the table (#4) by looping through the entire column
  */
 const removeColumns = () => {
   const table = document.getElementById("table");
@@ -42,7 +53,6 @@ function selectColor() {
 function clear_color() {
   document.getElementById("table").style.color = "black";
 }
-
 
 /**
  * click and hold (mouseover) from a single cell (start) to a different 
