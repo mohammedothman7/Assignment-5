@@ -44,6 +44,30 @@ const removeColumns = () => {
 };
 
 /**
+ * click on a single cell, changing its color to the currently selected color (#6) 
+ */
+table.addEventListener('click', (event) => {
+  let cell = event.target;
+  cell.style.backgroundColor = color;
+  if(cell.classList.contains("unColored")) {
+      cell.classList.toggle("unColored");
+  }
+})
+
+/**
+ * fill all uncolored cells with the currently selected color (#7)
+ */
+function fillAllUncoloredCells() 
+{
+  let uncoloredCells = document.querySelectorAll("td.uncolored");
+  for(let i in uncoloredCells)
+  {
+      uncoloredCells[i].style.backgroundColor = color;
+      uncoloredCells[i].classList.toggle("uncolored");
+  }
+}
+
+/**
  * fill all cells with the currently selected color (#8)
  */
 function selectColor() {
