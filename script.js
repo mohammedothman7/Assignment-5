@@ -39,7 +39,7 @@ const removeColumns = () => {
 };
 
 /**
- * fill all cells with the currently selected color
+ * fill all cells with the currently selected color (#8)
  */
 function selectColor() {
   const colorList = document.getElementById("colors");
@@ -48,8 +48,21 @@ function selectColor() {
 }
 
 /**
- * clear all cells/restore all cells to their original/initial color
+ * clear all cells/restore all cells to their original/initial color  (#9)
  */
 function clear_color() {
   document.getElementById("table").style.color = "black";
+}
+
+/**
+ * click and hold (mouseover) from a single cell (start) to a different 
+ * cell (end) such that all affected/hovered-over cells from start to end 
+ * change to the currently selected color
+ */
+document.getElementById("table").addEventListener("mouseenter", fillAllCells);
+function fillAllCells() {
+    const colorList = document.getElementById("colors");
+    let selectedColor = colorList.value;
+    document.getElementById("table").style.color = selectedColor;
+
 }
