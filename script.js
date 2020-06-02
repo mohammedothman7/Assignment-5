@@ -1,13 +1,18 @@
+let cells = 1; // Keeps track of the amount of cells, needed for adding rows to table
+
 const addRows = () => {
   // Add rows to the table (#1)
   let table = document.getElementById("table");
   let row = table.insertRow(0);
-  let cell = row.insertCell(0);
-  cell.innerHTML = "Hello";
+  for (let i = 0; i < cells; i++) {
+    let cell = row.insertCell(0);
+    cell.innerHTML = "Hello";
+  }
 };
 
 const addColumns = () => {
   // Add columns to the table (#2)
+  cells++;
   let table = document.getElementById("table");
   let row = table.rows;
 
@@ -55,14 +60,13 @@ function clear_color() {
 }
 
 /**
- * click and hold (mouseover) from a single cell (start) to a different 
- * cell (end) such that all affected/hovered-over cells from start to end 
+ * click and hold (mouseover) from a single cell (start) to a different
+ * cell (end) such that all affected/hovered-over cells from start to end
  * change to the currently selected color
- */
-document.getElementById("table").addEventListener("mouseenter", fillAllCells);
-function fillAllCells() {
-    const colorList = document.getElementById("colors");
-    let selectedColor = colorList.value;
-    document.getElementById("table").style.color = selectedColor;
-
+ */
+document.getElementById("table").addEventListener("mouseenter", fillAllCells);
+function fillAllCells() {
+  const colorList = document.getElementById("colors");
+  let selectedColor = colorList.value;
+  document.getElementById("table").style.color = selectedColor;
 }
